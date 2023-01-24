@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -17,44 +18,51 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class WebTest extends TestBase {
     @Test
-    @Tag("webTest")
+    @Tag("web test")
     @Owner("valGoncharov")
     @Severity(SeverityLevel.NORMAL)
-    @Description("Check specified content on IBS web-site")
-    @DisplayName("IBS-tests")
-    void ibsTest() {
-        step("Open url 'https://ibs.ru/'", () ->
-                open("https://ibs.ru/"));
+    @Description("Русская версия IBS принятие условий")
+    @DisplayName("web IBS tests")
+    void ibsOpenWebSiteTest() {
+        step("Open base URL company", () ->
+                open(baseUrl));
 
-        step("click on Accept cookies button", () -> {
-            $(".cookie.cookie__show").$(byText("Принимаю условия")).click();
+        step("Click on button Accept cookies", () -> {
+            $(".cookies-right").$(byText("Принять условия")).click();
+        });
+    }
+        @Test
+        @Tag("web test")
+        @Owner("valGoncharov")
+        @Severity(SeverityLevel.NORMAL)
+        @Description("Check specified content on IBS eng site")
+        @DisplayName("web IBS tests eng")
+        void ibsChooseLanguageTest() {
+        step("Click on ENG button", () -> {
+            $(".header-burger js-burger").click();
         });
 
-        step("click on ENG button", () -> {
-            $(".header__lang.lang").$(byText("ENG")).click();
+        step("Click on Technology Partners", () -> {
+            $(".card__title").$(byText("Technology Partners")).click();
         });
 
-        step("click on Technology Partners", () -> {
-            $(".aside-navigation__list").$(byText("Technology Partners")).click();
+        step("Click on see more", () -> {
+            $(".card__more").click();
         });
 
-        step("click on SHOW", () -> {
-            $("#ajax_load").click();
-        });
-
-        step("page should have modal ROBIN Partner", () -> {
-            $(".vendors-project-list.ajax_result").shouldHave(Condition.text("ROBIN"));
+        step("Check page should have modal ROBIN Partner", () -> {
+            $(".partners-item__title").shouldHave(Condition.text("Primo RPA"));
         });
     }
 
     @Test
-    @Description("IBS test")
-    @DisplayName("Page title should have header text")
-    void titleTest() {
-        step("Open url 'https://ibs.ru/'", () ->
-                open("https://ibs.ru/"));
+    @Description("web test")
+    @DisplayName("Check page title should have text")
+    void ibsTitleTest() {
+        step("Open base URL company", () ->
+                open(baseUrl));
 
-        step("Page title should have text 'IBS — ведущая российская IT-сервисная компания'", () -> {
+        step("Check page title should have text 'IBS — ведущая российская IT-сервисная компания'", () -> {
             String expectedTitle = "IBS — ведущая российская IT-сервисная компания";
             String actualTitle = title();
 

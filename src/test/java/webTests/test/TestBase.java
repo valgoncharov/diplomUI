@@ -7,18 +7,28 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import webTests.config.Property;
 import webTests.helpers.AllureAttachments;
 
 public class TestBase extends AllureAttachments {
     @BeforeAll
     static void beforeAll() {
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        Configuration.browserCapabilities = capabilities;
+        capabilities.setCapability("browserName", "chrome");
+        capabilities.setCapability("browserVersion", "100.0");
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
+
+        Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = "https://ibs.ru";
-        Configuration.browserSize = "1800x900";
+        Configuration.browser = Property.browser();
+        Configuration.browserSize = Property.browserSize();
+        Configuration.browserVersion = Property.browserVersion();
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        if (!Property.remoteUrl().equals("")){
+            Configuration.remote = Property.remoteUrl();
+        }
     }
 
     @BeforeEach
