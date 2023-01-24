@@ -35,9 +35,9 @@ public class WebTest extends TestBase {
         @Tag("web test")
         @Owner("valGoncharov")
         @Severity(SeverityLevel.NORMAL)
-        @Description("Check specified content on IBS eng site")
+        @Description("Check search on IBS site")
         @DisplayName("web IBS tests search")
-        void ibsChooseLanguageTest() {
+        void ibsSearchTest() {
         step("Click on search button", () -> {
             $(".header-search").click();
         });
