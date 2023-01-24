@@ -41,7 +41,7 @@
 - ✓ Проверить что в названии присутствует текст "IBS — ведущая российская IT-сервисная компания"
 
 
-## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/"> job </a>
+## <img src="image/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/"> job </a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/"><img src="image/jenkins.svg" alt="Jenkins"/></a>
 </p>
@@ -97,22 +97,21 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 ```bash
 allure serve build/allure-results
 ```
-## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/allure/">Allure report</a>
+## <img src="image/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/allure/">Allure report</a>
 
 ## 🧪: Сборка и запуск Тесты
 <p align="center">
-<img title="Allure Tests" src="image/Jenkins01.PNG">
+<img title="Allure Tests" src="image/Jenkins01.png">
 </p>
 
 ## ⛅: Основной отчет
 <p align="center">
-<img title="Allure Overview Dashboard" src="image/report.PNG">
+<img title="Allure Overview Dashboard" src="image/report.png">
 </p>
-C:\Users\Valentin\IBS-tests\images\screens\report.PNG
 
 ## 💹: Графики
 <p align="center">
-<img title="Allure Tests" src="image/graff.PNG">
+<img title="Allure Tests" src="image/graff.png">
 </p>
 
 
