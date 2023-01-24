@@ -1,17 +1,16 @@
 {
   "base": {
     "project": "${JOB_BASE_NAME}",
-    "environment": "opera",
-    "comment": "test",
+    "environment": "qa.guru",
+    "comment": "If you try it will be cool!",
     "reportLink": "${BUILD_URL}",
     "language": "en",
-    "messenger": "telegram",
-    "allureFolder": "build/allure-report/",
+    "allureFolder": "allure-report/",
     "enableChart": true
   },
   "telegram": {
-    "token": "5494532629:AAFLPEcPVL_QlKoPbkQi02STClI4xfXt70g",
-    "chat": "-1001625566256",
+    "token": "5640292189:AAH7-3QaTP14VqudBkCkDDNQkWBlzdFWYBU",
+    "chat": "-1001812713961",
     "replyTo": ""
   }
 }
