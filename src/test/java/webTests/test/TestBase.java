@@ -25,6 +25,7 @@ public class TestBase extends AllureAttachments {
         Configuration.browser = Property.browser();
         Configuration.browserSize = Property.browserSize();
         Configuration.browserVersion = Property.browserVersion();
+        Configuration.holdBrowserOpen = true;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         if (!Property.remoteUrl().equals("")){
             Configuration.remote = Property.remoteUrl();

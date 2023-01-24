@@ -104,7 +104,7 @@ allure serve build/allure-results
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/report.PNG">
 </p>
-C:\Users\maver\IBS-tests\images\screens\report.PNG
+C:\Users\Valentin\IBS-tests\images\screens\report.PNG
 
 ## 🧪: Тесты
 <p align="center">
