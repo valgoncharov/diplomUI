@@ -50,7 +50,7 @@
 ## 🧙: Параметры сборки в Jenkins:
 
 - Browser (браузер, по умолчанию chrome)
-- Version (версия браузера, по умолчанию 91.0)
+- Version (версия браузера, по умолчанию 108.0)
 - Browser_size (размер окна браузера, по умолчанию 1920x1080)
 
 
@@ -76,7 +76,7 @@ test
 ### Для запуска удаленных тестов необходимо заполнить remote.properties или передать значение:
 
 * browser (default chrome)
-* browserVersion (default 89.0)
+* browserVersion (default 108.0)
 * browserSize (default 1920x1080)
 * browserMobileView (mobile device name, for example iPhone X)
 * remoteDriverUrl (url address from selenoid or grid)
