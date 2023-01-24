@@ -22,7 +22,7 @@ public class WebTest extends TestBase {
     @Owner("valGoncharov")
     @Severity(SeverityLevel.NORMAL)
     @Description("Русская версия IBS принятие условий")
-    @DisplayName("web IBS tests")
+    @DisplayName("web IBS accept cookies")
     void ibsOpenWebSiteTest() {
         step("Open base URL company", () ->
                 open(baseUrl));
@@ -36,22 +36,18 @@ public class WebTest extends TestBase {
         @Owner("valGoncharov")
         @Severity(SeverityLevel.NORMAL)
         @Description("Check specified content on IBS eng site")
-        @DisplayName("web IBS tests eng")
+        @DisplayName("web IBS tests search")
         void ibsChooseLanguageTest() {
-        step("Click on ENG button", () -> {
-            $(".header-burger js-burger").click();
+        step("Click on search button", () -> {
+            $(".header-search").click();
         });
 
-        step("Click on Technology Partners", () -> {
-            $(".card__title").$(byText("Technology Partners")).click();
+        step("Click on text Импортозамещение", () -> {
+            $(byText("Импортозамещение")).click();
         });
 
-        step("Click on see more", () -> {
-            $(".card__more").click();
-        });
-
-        step("Check page should have modal ROBIN Partner", () -> {
-            $(".partners-item__title").shouldHave(Condition.text("Primo RPA"));
+        step("Check page should have text", () -> {
+            $(".tab").shouldHave(Condition.text("результаты"));
         });
     }
 
