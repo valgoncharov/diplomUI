@@ -43,7 +43,7 @@
 
 ## <img src="image/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/"> job </a>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/"><img src="image/jenkins.svg" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/"> <img src="image/Jenkins01.png" alt="Jenkins"/></a>
 </p>
 
 
@@ -99,9 +99,9 @@ allure serve build/allure-results
 ```
 ## <img src="image/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/allure/">Allure report</a>
 
-## 🧪: Сборка и запуск Тесты
+## 🧪: Тесты
 <p align="center">
-<img title="Allure Tests" src="image/Jenkins01.png">
+<img title="Allure Tests" src="image/Test.png">
 </p>
 
 ## ⛅: Основной отчет
