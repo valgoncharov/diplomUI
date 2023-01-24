@@ -43,7 +43,7 @@
 
 ## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/"> job </a>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/IBS_test/"><img src="images/screens/jenkins.PNG" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/ValGoncharovDiplomUI/"><img src="images//jenkins.PNG" alt="Jenkins"/></a>
 </p>
 
 
@@ -99,29 +99,20 @@ allure serve build/allure-results
 ```
 ## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/allure/">Allure report</a>
 
+## 🧪: Сборка и запуск Тесты
+<p align="center">
+<img title="Allure Tests" src="images/Jenkins01.PNG">
+</p>
+
 ## ⛅: Основной отчет
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/report.PNG">
+<img title="Allure Overview Dashboard" src="images/report.PNG">
 </p>
 C:\Users\Valentin\IBS-tests\images\screens\report.PNG
 
-## 🧪: Тесты
-<p align="center">
-<img title="Allure Tests" src="images/screens/tests.PNG">
-</p>
-
 ## 💹: Графики
 <p align="center">
-<img title="Allure Tests" src="images/screens/chart.PNG">
+<img title="Allure Tests" src="images/graff.PNG">
 </p>
 
-## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
 
-<p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/notif.PNG" >
-</p>
-
-## <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео <a target="_blank" href="https://selenoid.autotests.cloud/video/fe43b9f89a795109ff4959044e6650d7.mp4"> прохождения тестов </a>
-<p align="center">
-<a href="https://selenoid.autotests.cloud/video/fe43b9f89a795109ff4959044e6650d7.mp4"></a>
-</p>
