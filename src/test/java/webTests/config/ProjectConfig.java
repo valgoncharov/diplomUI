@@ -13,6 +13,9 @@ public interface ProjectConfig extends Config {
     @Key("baseUrl")
     @DefaultValue("https://ibs.ru")
     String baseUrl();
+    @Key("secondUrl")
+    @DefaultValue("https://ibs-qa.ru/")
+    String secondUrl();
     @DefaultValue("chrome")
     String browserName();
     @DefaultValue("108.0")

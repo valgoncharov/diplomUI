@@ -10,14 +10,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import webTests.config.Property;
 import webTests.helpers.AllureAttachments;
 import webTests.pages.MainPage;
+import webTests.pages.QaPage;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase extends AllureAttachments {
     MainPage mainPage = new MainPage();
+    QaPage qaPage = new QaPage();
     @BeforeAll
     static void beforeAll() {
-        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe"); у меня тогда не запускаются
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("browserVersion", "100.0");
