@@ -9,8 +9,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import webTests.config.Property;
 import webTests.helpers.AllureAttachments;
+import webTests.pages.MainPage;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase extends AllureAttachments {
+    MainPage mainPage = new MainPage();
     @BeforeAll
     static void beforeAll() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
@@ -43,5 +47,6 @@ public class TestBase extends AllureAttachments {
         pageSource();
         browserConsoleLogs();
         addVideo();
+        closeWebDriver();
     }
 }

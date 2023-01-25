@@ -1,6 +1,5 @@
 package webTests.test;
 
-import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
@@ -9,14 +8,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-import static org.assertj.core.api.Assertions.assertThat;
-
 
 public class WebTest extends TestBase {
+
     @Test
     @Tag("web test")
     @Owner("valGoncharov")
@@ -25,44 +20,71 @@ public class WebTest extends TestBase {
     @DisplayName("web IBS accept cookies")
     void ibsOpenWebSiteTest() {
         step("Open base URL company", () ->
-                open(baseUrl));
+            mainPage.openMainPage());
 
         step("Click on button Accept cookies", () -> {
-            $(".cookies-right").$(byText("Принять условия")).click();
-        });
-    }
-        @Test
-        @Tag("web test")
-        @Owner("valGoncharov")
-        @Severity(SeverityLevel.NORMAL)
-        @Description("Check search on IBS site")
-        @DisplayName("web IBS tests search")
-        void ibsSearchTest() {
-        step("Click on search button", () -> {
-            $(".header-search").click();
-        });
-
-        step("Click on text Импортозамещение", () -> {
-            $(byText("Импортозамещение")).click();
-        });
-
-        step("Check page should have text", () -> {
-            $(".tab").shouldHave(Condition.text("результаты"));
-        });
+            mainPage.buttonAcceptCookies();});
     }
 
     @Test
+    @Tag("web test")
+    @Owner("valGoncharov")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Main page main elements")
+    @DisplayName("web IBS main page elements")
+    void elementsMainPageTest() {
+        step("Open base URL company", () ->
+            mainPage.openMainPage());
+
+        step("Check elements on main page - middle level", () -> {
+            mainPage.checkButtonLogo()
+                    .checkMainProduct()
+                    .checkMainSolution();});
+    }
+
+    @Test
+    @Tag("web test")
+    @Owner("valGoncharov")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Check elements on footer")
+    @DisplayName("web IBS console logs")
+    void footerPageTest() {
+        step("Open base URL company", () ->
+            mainPage.openMainPage());
+
+        step("Check elements on main page - footer level", () -> {
+            mainPage.checkFooterOffice()
+                    .checkFooterContacts()
+                    .checkFooterLegal()
+                    .checkFooterCity();});
+    }
+
+    @Test
+    @Tag("web test")
+    @Owner("valGoncharov")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Check search on IBS site")
+    @DisplayName("web IBS tests search")
+    void ibsSearchTest() {
+        step("Click on search button", () -> {
+           mainPage.checkSearchButton();});
+
+        step("Click on text Импортозамещение", () -> {
+           mainPage.getSearchData();});
+
+        step("Check page should have text", () -> {
+           mainPage.checkResultSearch();});
+    }
+
+    @Test
+    @Tag("web test")
     @Description("web test")
     @DisplayName("Check page title should have text")
     void ibsTitleTest() {
         step("Open base URL company", () ->
-                open(baseUrl));
+            mainPage.openMainPage());
 
-        step("Check page title should have text 'IBS — ведущая российская IT-сервисная компания'", () -> {
-            String expectedTitle = "IBS — ведущая российская IT-сервисная компания";
-            String actualTitle = title();
-
-            assertThat(actualTitle).isEqualTo(expectedTitle);
-        });
+        step("Check page Main title text", () -> {
+            mainPage.checkTitleText();});
     }
 }
