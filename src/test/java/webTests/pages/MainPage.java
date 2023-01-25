@@ -67,7 +67,7 @@ public class MainPage {
     }
 
     public MainPage checkFooterCity() {
-        footerCities.shouldHave(text(("MAIN_CITY")));
+        footerCities.shouldHave(text((MAIN_CITY)));
         return this;
     }
 
