@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
         "classpath:resources/config/local.properties",
         "classpath:resources/config/remote.properties"
 })
-public interface ProjectConfig extends Config {
+public interface WebConfig extends Config {
 
     @Key("baseUrl")
     @DefaultValue("https://ibs.ru")
@@ -16,13 +16,16 @@ public interface ProjectConfig extends Config {
     @Key("secondUrl")
     @DefaultValue("https://ibs-qa.ru/")
     String secondUrl();
+
     @DefaultValue("chrome")
-    String browserName();
+    String browser();
     @DefaultValue("108.0")
     String browserVersion();
+    @Key("browserSize")
     @DefaultValue("1920x1080")
     String browserSize();
-    String browserMobileView();
-    String remoteDriverUrl();
-    String videoStorage();
+    @Key("remote")
+    String remote();
+    String selenoidLogin();
+    String selenoidPassword();
 }
