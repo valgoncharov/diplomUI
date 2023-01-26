@@ -5,7 +5,7 @@
     "comment": "If you try it will be cool!",
     "reportLink": "${BUILD_URL}",
     "language": "en",
-    "allureFolder": "build/allure-report/",
+    "allureFolder": "build/allure-result/",
     "enableChart": true
   },
   "telegram": {

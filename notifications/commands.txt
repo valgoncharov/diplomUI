@@ -1,1 +1,2 @@
-java "-DconfigFile=notifications/teleg.json" -jar allure-notifications-4.1.jar
+java "-DconfigFile=notifications/telegram.json" -jar notifications/allure-notifications-4.2.1.jar
+java -DconfigFile=notifications/telegram.json -jar notifications/allure-notifications-4.2.1.jar
