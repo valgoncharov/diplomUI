@@ -18,7 +18,6 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        //System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe"); если без, то у меня тогда не запускаются
         WebDriver.configure();
     }
 
