@@ -6,6 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static webTests.data.TestData.ACCEPT_CONDITION;
 import static webTests.data.TestData.secondUrl;
 
 public class QaPage {
@@ -14,8 +15,7 @@ public class QaPage {
                            promoToggles = $(".promo-toggles__left col-6"),
                            toggleTitle = $(".toggle-title");
 
-    private final static String ACCEPT_CONDITION = "Принять условия",
-                                PROMO_TEXT = "Преимущества работы",
+    private final static String PROMO_TEXT = "Преимущества работы",
                                 TOGGLE_TITLE = "Консалтинг";
 
     public QaPage openQaPage() {
