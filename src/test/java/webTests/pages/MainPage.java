@@ -2,16 +2,14 @@ package webTests.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPage {
-    public SelenideElement buttonLogo = $(".header-logo"),
+    private final static SelenideElement buttonLogo = $(".header-logo"),
                            productMain = $("#bx_1373509569_2413"),
                            mainSolutions = $(".main-solutions"),
                            buttonAccept = $(".cookies-right"),
@@ -28,8 +26,7 @@ public class MainPage {
                           MAIN_OFFICE = "Головной офис",
                           MAIN_PHONE = "Телефон",
                           MAIN_LEGAL = "Персональные данные и правовые аспекты",
-                          MAIN_CITY = "Уфа",
-                          ACTUAL_TITLE = title();
+                          MAIN_CITY = "Уфа";
 
     public MainPage openMainPage() {
         open(baseUrl);
@@ -37,7 +34,7 @@ public class MainPage {
     }
 
     public MainPage checkButtonLogo() {
-        buttonLogo.should(exist);
+        buttonLogo.should(visible);
         return this;
     }
 
@@ -92,10 +89,7 @@ public class MainPage {
     }
 
     public MainPage checkTitleText() {
-        assertThat(ACTUAL_TITLE).isEqualTo(EXPECTED_TITLE);
+        assertThat(title()).isEqualTo(EXPECTED_TITLE);
         return this;
     }
-
-
-
 }

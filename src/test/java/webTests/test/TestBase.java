@@ -8,7 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import webTests.drivers.WebDriver;
 import webTests.pages.MainPage;
 import webTests.pages.QaPage;
-
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static webTests.helpers.AllureAttachments.*;
 

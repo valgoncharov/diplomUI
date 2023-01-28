@@ -9,13 +9,11 @@ public class WebDriver {
     public static WebConfig config = ConfigFactory.create(WebConfig.class);
     public static void configure() {
         Configuration.baseUrl = config.baseUrl();
-        Configuration.baseUrl = config.secondUrl();
         Configuration.browser = config.browser();
         Configuration.browserSize = config.browserSize();
         Configuration.browserVersion = config.browserVersion();
-        Configuration.holdBrowserOpen = true;
-        System.setProperty("chromeoptions.prefs","intl.accept_languages=ru");
         String configSource = config.remote();
+        String chromeOptions = config.chromeOptions();
 
         if (configSource != null) {
             String selenoidLogin = config.selenoidLogin(),

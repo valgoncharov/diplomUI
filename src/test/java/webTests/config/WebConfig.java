@@ -16,7 +16,6 @@ public interface WebConfig extends Config {
     @Key("secondUrl")
     @DefaultValue("https://ibs-qa.ru/")
     String secondUrl();
-
     @DefaultValue("chrome")
     String browser();
     @DefaultValue("108.0")
@@ -28,4 +27,6 @@ public interface WebConfig extends Config {
     String remote();
     String selenoidLogin();
     String selenoidPassword();
+    @DefaultValue("intl.accept_languages=ru")
+    String chromeOptions();
 }
